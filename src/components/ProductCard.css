@@ -1,0 +1,23 @@
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-actions {
+    margin-bottom: 1rem;
+}
+
+.card-button {
+    text-transform: none;
+    font-weight: 600;
+    color: #ffffff !important;
+    width: 100%;
+}
+
+.card .productImage {
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+}
