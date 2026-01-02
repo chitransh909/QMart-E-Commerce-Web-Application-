@@ -1,6 +1,13 @@
-const nedb = require('nedb');
-const users = new nedb({ filename: 'db/users.db', autoload: true })
-const products = new nedb({ filename: 'db/products.db', autoload: true });
+const mongoose = require("mongoose");
 
-module.exports.users = users
-module.exports.products = products
+const connectDB = async () => {
+  try {
+    await mongoose.connect(process.env.MONGO_URI);
+    console.log("MongoDB Connected");
+  } catch (error) {
+    console.error(error);
+    process.exit(1);
+  }
+};
+
+module.exports = connectDB;
